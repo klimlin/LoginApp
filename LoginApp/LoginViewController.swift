@@ -26,7 +26,10 @@ class LoginViewController: UIViewController {
                     } else { return }
                 } else {
                     showAlert(withTitle: "Invalid Login or Password", andMessage: "Please, enter correct login and password")
+                    
                 }
+                loginTextField.text = ""
+                passwordTextField.text = ""
             }
     
     
