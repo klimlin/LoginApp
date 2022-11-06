@@ -41,37 +41,11 @@ class LoginViewController: UIViewController {
     @IBAction func showForgottenPassword() {
         showAlert(withTitle: "Oops!", andMessage: "Try: 1234")
     }
-    
-//    @IBAction func loginButtonPressed() {
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        if loginTextField.text == "User" && passwordTextField.text == "1234" {
-//
-//            let welcomeVC = storyboard.instantiateViewController(withIdentifier: "WelcomeVC")
-//            welcomeVC.
-//            self.present(welcomeVC, animated: true)
-//
-//
-//        } else {
-//            showAlert(withTitle: "Invalid Login or Password", andMessage: "Please, enter correct login and password")
-//        }
-//    }
-    
-//    @IBAction func passData() {
-//           let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//           guard let secondViewController = storyboard.instantiateViewController(identifier: "SecondViewController") as? SecondViewController else { return }
-//           secondViewController.name = "Ivan"
-//
-//           show(secondViewController, sender: nil)
-//       }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-//        welcomeVC.welcomeName = loginTextField.text!
-//    }
+
     
 }
 
-// MARK: - Alertions
+// MARK: - Alertion
 
 extension LoginViewController {
     private func showAlert(withTitle title: String, andMessage message: String) {
