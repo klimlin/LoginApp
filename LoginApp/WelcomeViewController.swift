@@ -9,6 +9,8 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,4 +19,7 @@ class WelcomeViewController: UIViewController {
     
 
 
+    @IBAction func logOutButtonPressed() {
+        dismiss(animated: true)
+    }
 }

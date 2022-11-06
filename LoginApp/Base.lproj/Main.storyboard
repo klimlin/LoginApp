@@ -36,18 +36,28 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Forgot User name?"/>
+                                <connections>
+                                    <action selector="showForgottenName" destination="BYZ-38-t0r" eventType="touchUpInside" id="UPn-QV-F3M"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iyh-mJ-fG8">
                                 <rect key="frame" x="227" y="423" width="123" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Forgot password?"/>
+                                <connections>
+                                    <action selector="showForgottenPassword" destination="BYZ-38-t0r" eventType="touchUpInside" id="o3v-OA-es0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vjr-KM-Yuq">
                                 <rect key="frame" x="135" y="355" width="121" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Log in"/>
+                                <connections>
+                                    <action selector="loginButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="SLN-O0-EfA"/>
+                                    <segue destination="plf-mJ-uuD" kind="presentation" modalPresentationStyle="fullScreen" id="Mw7-rI-ExZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -66,6 +76,10 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Iyh-mJ-fG8" secondAttribute="bottom" constant="357" id="x3b-jr-35y"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginTextField" destination="26z-bw-VMd" id="MoE-Hl-sFo"/>
+                        <outlet property="passwordTextField" destination="Fmw-Cr-wlK" id="4mq-Xw-Ugb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -74,7 +88,7 @@
         <!--Welcome View Controller-->
         <scene sceneID="DUA-CW-SAv">
             <objects>
-                <viewController id="plf-mJ-uuD" customClass="WelcomeViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeVC" id="plf-mJ-uuD" customClass="WelcomeViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tad-d3-ROm">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,6 +104,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Log out"/>
+                                <connections>
+                                    <action selector="logOutButtonPressed" destination="plf-mJ-uuD" eventType="touchUpInside" id="9cE-pB-l56"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XVm-PE-YyC"/>
